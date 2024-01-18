@@ -1,9 +1,9 @@
 {
-    "name": "hyperf/biz-skeleton",
+    "name": "hyperf/swow-skeleton",
     "type": "project",
     "keywords": [
         "php",
-        "swoole",
+        "swow",
         "framework",
         "hyperf",
         "microservice",
@@ -18,7 +18,6 @@
         "ext-pdo": "*",
         "ext-pdo_mysql": "*",
         "ext-redis": "*",
-        "ext-swoole": ">=5.0",
         "hyperf/async-queue": "3.1.*",
         "hyperf/cache": "3.1.*",
         "hyperf/command": "3.1.*",
@@ -31,7 +30,7 @@
         "hyperf/db-connection": "3.1.*",
         "hyperf/di": "3.1.*",
         "hyperf/dispatcher": "3.1.*",
-        "hyperf/engine": "^2.0",
+        "hyperf/engine-swow": "^2.10",
         "hyperf/event": "3.1.*",
         "hyperf/exception-handler": "3.1.*",
         "hyperf/framework": "3.1.*",
@@ -51,8 +50,7 @@
         "hyperf/devtool": "3.1.*",
         "hyperf/testing": "3.1.*",
         "mockery/mockery": "^1.0",
-        "phpstan/phpstan": "^1.0",
-        "swoole/ide-helper": "dev-master"
+        "phpstan/phpstan": "^1.0"
     },
     "autoload": {
         "psr-4": {
@@ -84,7 +82,7 @@
         "analyse": "phpstan analyse --memory-limit 512M",
         "cs-fix": "php-cs-fixer fix $1",
         "start": "php ./bin/hyperf.php start",
-        "test": "co-phpunit --prepend test/bootstrap.php --colors=always",
+        "test": "phpunit --colors=always",
         "rector": "rector process --clear-cache"
     }
 }
