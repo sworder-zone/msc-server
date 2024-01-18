@@ -12,6 +12,8 @@ declare(strict_types=1);
 
 namespace App\Model;
 
+use App\Constants\ProjectStatus;
+
 /**
  * @property int $id
  * @property string $name 应用名称
@@ -22,7 +24,7 @@ namespace App\Model;
  * @property string $projectType 1 web
  * @property string $encryption 0 不加密 1 加密
  * @property int $delay 应用间隔时间
- * @property int $status 0 禁用 1 启用
+ * @property ProjectStatus $status 0 禁用 1 启用
  * @property string $startTime 创建时间
  * @property string $updateTime 修改时间
  * @property string $cookieUserKey
@@ -42,5 +44,5 @@ class Project extends Model
     /**
      * The attributes that should be cast to native types.
      */
-    protected array $casts = ['id' => 'integer', 'maxQueues' => 'integer', 'delay' => 'integer', 'status' => 'integer'];
+    protected array $casts = ['id' => 'integer', 'maxQueues' => 'integer', 'delay' => 'integer', 'status' => ProjectStatus::class];
 }
